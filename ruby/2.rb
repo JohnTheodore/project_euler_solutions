@@ -10,4 +10,6 @@ def fib(maximum)
   return sequence
 end
 
-puts fib(4000000).select { |i| i % 2 == 0 }.inject(:+)
+start = Time.now
+answer = fib(4000000).select { |i| i % 2 == 0 }.inject(:+)
+puts "Found answer: #{answer} in #{Time.now - start} seconds"
