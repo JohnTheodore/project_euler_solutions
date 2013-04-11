@@ -23,6 +23,6 @@ def prime_factors(n)
 end
 
 start = Time.now
-answer = factor_pool(10000).inject(:*)
+answer = factor_pool(20).inject(:*)
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
 # 0.000366807 seconds
