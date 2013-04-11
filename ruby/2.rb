@@ -13,3 +13,4 @@ end
 start = Time.now
 answer = fib(4000000).select { |i| i % 2 == 0 }.inject(:+)
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
+# 5.4057e-05 seconds

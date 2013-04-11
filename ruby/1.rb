@@ -4,3 +4,4 @@
 start = Time.now
 answer = (1..999).select { |i| (i % 3 == 0) || (i % 5 == 0) }.inject(:+)
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
+# 0.00071762 seconds

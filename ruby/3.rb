@@ -12,3 +12,4 @@ end
 start = Time.now
 answer = highest_prime_factor(600851475143)
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
+# 0.646162751 seconds
