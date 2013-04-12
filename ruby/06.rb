@@ -9,3 +9,4 @@
 start = Time.now
 answer = ( ((1..100).inject(:+) ** 2) - ((1..100).map { |i| i ** 2 }.inject(:+)) )
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
+# 0.000147435 seconds

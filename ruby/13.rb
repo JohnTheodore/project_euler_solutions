@@ -106,3 +106,4 @@
 start = Time.now
 answer = NUMS.map { |i| i.to_s[(0..9)].to_i }.inject(:+)
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
+# 0.000706585 seconds

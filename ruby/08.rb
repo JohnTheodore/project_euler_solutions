@@ -18,3 +18,4 @@ end
 start = Time.now
 answer = high_five_product
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
+# 0.00603729 seconds
