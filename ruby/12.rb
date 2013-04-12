@@ -13,6 +13,7 @@
 # We can see that 28 is the first triangle number to have over five divisors.
 # What is the value of the first triangle number to have over five hundred divisors?
 require 'prime'
+
 def factors_of(number)
   return [1] if number == 1
   primes, powers = number.prime_division.transpose
@@ -30,19 +31,17 @@ def factors_of(number)
   divs.uniq
 end
 
-def triangle_numbers(qty = 1)
-  set = [1]
-  return set if (qty == 1)
-  counter = 2
-  until counter == (qty + 1)
-    set << (set[-1] + counter)
-    divisors = (factors_of(set[-1]).count)
-    return "num: #{(set[-1])}, divisors: #{divisors}" if (divisors > 490)
-    counter += 1
+def triangle_numbers(factors)
+  set = [1, 1]
+  while true do
+    divisors = factors_of(set[-1]).count
+    (return set[-1]) if (divisors > factors)
+    set[-2] = set[-2] + 1
+    set[-1] = set[-1] + set[-2]
   end
-  set
 end
 
 start = Time.now
 answer = triangle_numbers(500)
 puts "Found answer: #{answer} in #{Time.now - start} seconds"
+# 11.578958749 seconds
