@@ -18,10 +18,6 @@ def sum_evens(array):
       summation += num
   return summation
 
-<<<<<<< HEAD
-=======
-
->>>>>>> b776cc2... try euler with python
 fib_array = get_fib_array(4000000)
 
 print sum_evens(fib_array)
